@@ -1,0 +1,54 @@
+name: Deploy to development
+
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18.10.0
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build
+        run: yarn run build
+
+      - name: Create deployment package
+        run: |
+          mkdir deployment
+          cp -R dist src package.json yarn.lock .ebextensions Procfile node_modules deployment/
+          cd deployment
+          zip -r ../app-dev-deployment.zip .
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - name: Deploy to AWS Elastic Beanstalk
+        run: |
+          aws s3 cp app-dev-deployment.zip s3://-----/app-dev-deployment.zip
+
+          aws elasticbeanstalk create-application-version \
+            --application-name domain \
+            --version-label $GITHUB_SHA \
+            --description "$GITHUB_SHA" \
+            --source-bundle S3Bucket=------,S3Key=app-dev-deployment.zip
+
+          aws elasticbeanstalk update-environment \
+            --application-name domain \
+            --environment-name environment \
+            --version-label $GITHUB_SHA

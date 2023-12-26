@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Inline styles for maximum compatibility */
+        .email-layout {
+            max-width: 414px;
+            width: 100%;
+            background-color: white;
+            padding: 25px;
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+
+        .email-footer {
+            max-width: 414px;
+            width: 100%;
+            background-color: #f5f5f5;
+            padding: 25px;
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            margin: 0;
+            font-family: Helvetica;
+        }
+
+        .image-container {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .listing-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            margin: 0 auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .divider {
+            width: 100%;
+            height: 0px;
+            border: 0.29px #D9D9D9 solid;
+            margin-top: 10px
+        }
+
+        .header-1 {
+            color: #193666;
+            font-weight: 700;
+            margin-top: 25px;
+        }
+
+        .subheader-1 {
+            color: #193666;
+            font-weight: 200;
+        }
+        .subheader-2 {
+            color: #193666;
+            
+        }
+
+        .header-2 {
+            color: #193666;
+            font-weight: 600;
+        }
+
+        .location {
+            font-weight: 300;
+            vertical-align: middle;
+        }
+
+        .container {
+            max-width: 414px;
+            width: 100%;
+            background-color: white;
+            padding: 25px;
+            border-radius: 5px;
+        }
+
+        .body {
+            font-family: Helvetica;
+            display: flex;
+            justify-content: center;
+            height: fit-content;
+            margin: 0;
+            background-color: #f5f5f5;
+            justify-content: center;
+        }
+
+        footer {
+            max-width: 414px;
+            width: 100%;
+            border-radius: 5px;
+            overflow-x: visible;
+        }
+
+        .divider {
+            width: 100%;
+            height: 0px;
+            border: 0.29px #D9D9D9 solid;
+            margin-top: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <table class="email-layout">
+        <tbody>
+            <tr>
+                <td>
+                    <img src="https://opusorbis-email-assets-prd.s3.amazonaws.com/logotipo.jpeg" alt="opusOrbis" border="0"
+                        width="190" height="auto">
+                    <h2 class="subheader-1"><strong>Bienvenido a Opus Orbis, {{guest}}!</strong>
+                    </h2>
+                   <p style="font-size: 14px; color: #828282" >Descubrí y reserva espacios de trabajo de forma flexible.</p>
+                   <div style="margin-top: 20px;">
+                    <span>
+                        <a href="https://app.opusorbis.com/"
+                            style="text-decoration: none; border:none">
+                            <button
+                                style="padding-right: 30px; padding-left: 30px; height: 40px; background: #5A55F4; border-radius: 10px; border: 0px;">
+                                <div style="color: white; font-size: 12px; font-weight: 700">
+                                    Explorar espacios
+                                </div>
+                            </button>
+                        </a>
+                    </span>
+                </div>
+                <br>
+                <div class="divider">
+                </div>
+
+
+
+
+                    <h3 class="subheader-2">¿Qué puedo hacer en Opus?</h3>
+                        
+                        <p> 🔎 Explorar espacios para tu actividad o momento <br>
+                        <span style="font-size: 14px; color: #828282" >Filtrá por ubicación o tipo de espacio.</span>
+
+                    </p>
+                        <p> ⏰ Reservar solo por el tiempo que necesites<br>
+                            <span style="font-size: 14px; color: #828282" >Alquila por hora, día, semana o mes.</span>
+    
+                        </p>
+
+                        <div class="divider">
+                        </div>
+                        <h3 class="subheader-2">¿Tenés un espacio libre? 💸</h3>
+                        <p>Convertite en anfitrión y lista tu espacio sin costo. <br> Sumate a nuestra comunidad de <b>+5.000 anfitriones</b> que ya estan ganando dinero con Opus.</p>
+                        <div style="margin-top: 20px;">
+                            <span>
+                                <a href="https://opusorbis.com/es/anfitrion.html"
+                                    style="text-decoration: none; border:none">
+                                    <button
+                                        style="padding-right: 30px; padding-left: 30px; height: 40px; background: #5A55F4; border-radius: 10px; border: 0px;">
+                                        <div style="color: white; font-size: 12px; font-weight: 700">
+                                            Convertirme en Anfitrión
+                                        </div>
+                                    </button>
+                                </a>
+                            </span>
+                        </div>
+                  
+                        <br />
+                    <br />
+                    <br />
+                    <br />
+                    <div>
+                        <a href="https://www.linkedin.com/company/opusorbis/" target="_blank"
+                            style="text-decoration: none; margin-right: 10px;">
+                            <img src="https://opusorbis-email-assets-prd.s3.amazonaws.com/linkedin-icon" alt="linkedin"
+                                border="0" width="20" height="20">
+                        </a>
+                        <a href="https://www.instagram.com/opusorbis/" target="_blank"
+                            style="text-decoration: none; margin-right: 10px;">
+                            <img src="https://opusorbis-email-assets-prd.s3.amazonaws.com/instagram-icon"
+                                alt="instagram" border="0" width="20" height="20">
+                        </a>
+                        <a href="https://www.tiktok.com/@opus.orbis" target="_blank"
+                            style="text-decoration: none;  margin-right: 10px;">
+                            <img src=" https://opusorbis-email-assets-prd.s3.amazonaws.com/Tiktok+icon" alt="instagram"
+                                border="0" width="20" height="20">
+                        </a>
+
+                    </div>
+                    <div style='width: 100%; height: 0px; border: 0.29px #D9D9D9 solid; margin-top:10px'>
+                    </div>
+                    <p>
+                        Libertad para trabajar donde quieras.
+                    </p>
+                    <p style="font-size: 12px;">
+                        En caso de una duda contáctese con support@opusorbis.com
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>

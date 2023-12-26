@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        /* Inline styles for maximum compatibility */
+        .email-layout {
+            max-width: 414px;
+            width: 100%;
+            background-color: white;
+            padding: 25px;
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+
+        .email-footer {
+            max-width: 414px;
+            width: 100%;
+            background-color: #f5f5f5;
+            padding: 25px;
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            margin: 0;
+            font-family: Helvetica;
+        }
+
+        .image-container {
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .listing-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            margin: 0 auto;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .divider {
+            width: 100%;
+            height: 0px;
+            border: 0.29px #D9D9D9 solid;
+            margin-top: 10px
+        }
+
+        .header-1 {
+            color: #193666;
+            font-weight: 700;
+            margin-top: 25px;
+        }
+
+        .subheader-1 {
+            color: #282828;
+            font-weight: 200;
+        }
+
+        .header-2 {
+            color: #009999;
+            font-weight: 600;
+        }
+
+        .location {
+            font-weight: 300;
+            vertical-align: middle;
+        }
+
+        .container {
+            max-width: 414px;
+            width: 100%;
+            background-color: white;
+            padding: 25px;
+            border-radius: 5px;
+        }
+
+        .body {
+            font-family: Helvetica;
+            display: flex;
+            justify-content: center;
+            height: fit-content;
+            margin: 0;
+            background-color: #f5f5f5;
+            justify-content: center;
+        }
+
+        footer {
+            max-width: 414px;
+            width: 100%;
+            border-radius: 5px;
+            overflow-x: visible;
+        }
+
+        .divider {
+            width: 100%;
+            height: 0px;
+            border: 0.29px #D9D9D9 solid;
+            margin-top: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <table class="email-layout">
+        <tbody>
+            <tr>
+                <td>
+                    <img src="https://spacepal-email-assets-prd.s3.amazonaws.com/footer.png" alt="spacePal" border="0"
+                        width="auto" height="70" style="margin-left: -30px;  margin-bottom: -20px;">
+                    <h2 class="subheader-1"><strong>¡Tu espacio de trabajo te espera!</strong>
+                    </h2>
+                    <div class="image-container">
+                        <img class="listing-image"
+                           src="{{imageUrl.path}}" />
+                    </div>
+                    <div style="border:1px solid #D9D9D9; border-radius: 5px; padding-left: 15px; margin-top: 15px;">
+                        <h4 class="header-2" style="margin-bottom: 0px;">{{spaceTitle}}</h4>
+                        <p class="location" tyle="margin-top: 0px;">
+                            <span>
+                                <img src="https://spacepal-email-assets-prd.s3.amazonaws.com/location.png"
+                                    height="15px" width="auto" style="margin-right: 5px;" />
+                            </span>
+                            <span>
+                                {{spaceLocation}}
+                            </span>
+                        </p>
+
+                        <p>
+                            {{date}}
+                        </p>
+                        <p>
+                            Total: {{payment}}
+                        </p>
+                    </div>
+
+                    <p>Presentate en {{spaceLocation}} el {{date}}. Acordate de avisar que reservaste a través de SpacePal 😉. <br>
+                    
+                    <br />
+                    <br />
+                    <div>
+                        <a href="https://www.linkedin.com/company/spacepalar/" target="_blank"
+                            style="text-decoration: none; margin-right: 10px;">
+                            <img src="https://spacepal-email-assets-prd.s3.amazonaws.com/linkedin-icon" alt="linkedin"
+                                border="0" width="20" height="20">
+                        </a>
+                        <a href="https://www.instagram.com/spacepal.ar/" target="_blank"
+                            style="text-decoration: none; margin-right: 10px;">
+                            <img src="https://spacepal-email-assets-prd.s3.amazonaws.com/instagram-icon"
+                                alt="instagram" border="0" width="20" height="20">
+                        </a>
+                        <a href="https://www.tiktok.com/@spacepal.pro" target="_blank"
+                            style="text-decoration: none;  margin-right: 10px;">
+                            <img src=" https://spacepal-email-assets-prd.s3.amazonaws.com/Tiktok+icon" alt="instagram"
+                                border="0" width="20" height="20">
+                        </a>
+
+                    </div>
+                    <div style='width: 100%; height: 0px; border: 0.29px #D9D9D9 solid; margin-top:10px'>
+                    </div>
+                    <p>
+                        Libertad para trabajar desde donde quieras.
+                    </p>
+                    <p style="font-size: 12px;">
+                        En caso de una duda contáctese con support@space-pal.com
+                    </p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
